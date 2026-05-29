@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KONECTA WDE — Gerencial Vivo Carteirização</title>
+<title>KONECTA WDE — Carteirização Gerencial Vivo</title>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
 :root{--vivo:#660099;--vivo2:#8B19C8;--vivo3:#A855F7;--vivo-light:#F3E8FF;--ink:#1E1B4B;--bg:#FAFAFA;--border:#E9D5FF;--ok:#10B981;--warn:#F59E0B;--bad:#EF4444}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
-body{background:var(--bg);color:var(--ink);min-height:100vh}
+corpo{plano de fundo:var(--bg);cor:var(--ink);altura mínima:100vh}
 
-/* HERO ANIMADO PREMIUM */
+/* HERÓI ANIMADO PREMIUM */
 #hero{position:fixed;inset:0;z-index:50;background:linear-gradient(-45deg,#1E1B4B,#3B0764,#660099,#8B19C8,#C084FC);background-size:400% 400%;animation:grad 14s ease infinite;display:flex;align-items:center;justify-content:center;transition:opacity .8s,visibility .8s;overflow:hidden}
 @keyframes grad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 #hero::before,#hero::after{content:'';position:absolute;border-radius:50%;filter:blur(80px);opacity:.5}
@@ -44,8 +44,8 @@ body{background:var(--bg);color:var(--ink);min-height:100vh}
 #app{display:none;min-height:100vh}
 .topbar{background:linear-gradient(90deg,#1E1B4B 0%,#660099 50%,#8B19C8 100%);color:#fff;padding:18px 36px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 20px rgba(102,0,153,.3);position:sticky;top:0;z-index:20}
 .topbar-left{display:flex;align-items:center;gap:18px}
-.brand{font-size:24px;font-weight:900;letter-spacing:3px}
-.brand span{color:#C084FC}
+.marca{tamanho da fonte:24px;peso da fonte:900;espaçamento entre letras:3px}
+.marca span{color:#C084FC}
 .tag{background:rgba(255,255,255,.15);padding:5px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px}
 .topbar-right{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .btn{background:#fff;color:#660099;border:none;padding:10px 18px;border-radius:10px;cursor:pointer;font-weight:700;font-size:13px;transition:all .25s}
@@ -92,7 +92,7 @@ body{background:var(--bg);color:var(--ink);min-height:100vh}
 .filters-grid input,.filters-grid select{width:100%;padding:11px;border:2px solid var(--border);border-radius:10px;font-size:13px;background:#fff;color:var(--ink);font-weight:500}
 .filters-grid input:focus,.filters-grid select:focus{outline:none;border-color:var(--vivo3)}
 
-/* SUPERVISOR PANEL */
+/* COMISSÃO DE SUPERVISORES */
 .sup-section{background:linear-gradient(135deg,#FAF5FF 0%,#fff 100%);border:2px solid var(--border);border-radius:20px;padding:24px;margin-bottom:24px}
 .sup-section h2{color:var(--vivo);font-size:20px;font-weight:900;margin-bottom:5px;display:flex;align-items:center;gap:10px}
 .sup-section .sub{color:#6B7280;font-size:13px;margin-bottom:18px}
@@ -116,7 +116,7 @@ body{background:var(--bg);color:var(--ink);min-height:100vh}
 .table-head{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#FAF5FF,#fff);flex-wrap:wrap;gap:10px}
 .table-head h3{color:var(--vivo);font-size:16px;font-weight:800}
 .tbl-wrap{overflow-x:auto;max-height:600px;overflow-y:auto}
-table{width:100%;border-collapse:collapse;font-size:12px}
+tabela{largura:100%;collapse-borda:collapse;tamanho-da-fonte:12px}
 thead{position:sticky;top:0;background:linear-gradient(135deg,#660099,#8B19C8);color:#fff;z-index:5}
 th{padding:12px 10px;text-align:left;font-weight:700;font-size:11px;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
 td{padding:10px;border-bottom:1px solid #F3E8FF;font-weight:500}
@@ -148,13 +148,13 @@ tbody tr.bad:hover{background:#FEE2E2}
     <div class="hero-logo">KONECTA</div>
     <div class="hero-sub">WDE • OPERADOR • GERENCIAL</div>
     <h1 class="hero-title">Dashboard Inteligente de Pausas</h1>
-    <p class="hero-desc"><span class="hero-pulse"></span>Importe sua planilha · Visão consolidada por supervisor · Snapshots diários · Análise de aderência em tempo real</p>
+    <p class="hero-desc"><span class="hero-pulse"></span>Importar sua planilha · Visão consolidada por supervisor · Snapshots diários · Análise de aderência em tempo real</p>
     <button class="hero-btn" onclick="entrar()">🚀 ACESSAR PAINEL</button>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="hero-stat-num">📊</div><div class="hero-stat-lbl">Dashboards</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">📊</div><div class="hero-stat-lbl">Painéis</div></div>
       <div class="hero-stat"><div class="hero-stat-num">👥</div><div class="hero-stat-lbl">Supervisores</div></div>
       <div class="hero-stat"><div class="hero-stat-num">⏱️</div><div class="hero-stat-lbl">Aderência</div></div>
-      <div class="hero-stat"><div class="hero-stat-num">🎯</div><div class="hero-stat-lbl">Performance</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">🎯</div><div class="hero-stat-lbl">Desempenho</div></div>
     </div>
   </div>
 </div>
@@ -194,20 +194,24 @@ tbody tr.bad:hover{background:#FEE2E2}
 
       <div class="tabs">
         <button class="tab active" onclick="trocaTab('geral',this)">📊 Visão Geral</button>
-        <button class="tab" onclick="trocaTab('diario',this)">📅 TEMP LOG D-1 (Dia)</button>
+        <button class="tab" onclick="trocaTab('produto',this)">🎁 Por Produto</button>
+        <button class="tab" onclick="trocaTab('excedentes',this)">⏰ Excedentes Pausa</button>
+        <button class="tab" onclick="trocaTab('aderência',this)">🎯 Aderência Geral</button>
+        <button class="tab" onclick="trocaTab('logue',this)">⛔ Sem Logue 6:20</button>
+        <button class="tab" onclick="trocaTab('diario',this)">📅 REGISTRO TEMPORÁRIO D-1 (Dia)</button>
         <button class="tab" onclick="trocaTab('supervisor',this)">👥 Por Supervisor</button>
-        <button class="tab" onclick="trocaTab('operadores',this)">🧑‍💼 Operadores Detalhe</button>
+        <button class="tab" onclick="trocaTab('operadores',this)">🧑‍💼 Detalhes dos Operadores</button>
       </div>
 
       <div id="tab-geral">
         <div class="kpi-grid">
-          <div class="kpi"><div class="kpi-label">Total Operadores</div><div class="kpi-value" id="kOps">—</div><div class="kpi-sub">Registros válidos</div></div>
+          <div class="kpi"><div class="kpi-label">Total de Operadores</div><div class="kpi-value" id="kOps">—</div><div class="kpi-sub">Registros válidos</div></div>
           <div class="kpi green"><div class="kpi-label">✅ Atingiram 6:20</div><div class="kpi-value" id="kAting">—</div><div class="kpi-sub">Bateram a meta</div></div>
           <div class="kpi red"><div class="kpi-label">❌ Não Atingiram</div><div class="kpi-value" id="kNAting">—</div><div class="kpi-sub">Abaixo da jornada</div></div>
           <div class="kpi green"><div class="kpi-label">Tempo Ativo (Logado)</div><div class="kpi-value" id="kLog">—</div><div class="kpi-sub">Soma total</div></div>
           <div class="kpi amber"><div class="kpi-label">Tempo Indisponível</div><div class="kpi-value" id="kPause">—</div><div class="kpi-sub">Pausa total</div></div>
-          <div class="kpi blue"><div class="kpi-label">Lanche + Descanso</div><div class="kpi-value" id="kBreak">—</div><div class="kpi-sub">Total</div></div>
-          <div class="kpi"><div class="kpi-label">NR17</div><div class="kpi-value" id="kNR17">—</div></div>
+          <div class="kpi blue"><div class="kpi-label">Lançamento + Descanso</div><div class="kpi-value" id="kBreak">—</div><div class="kpi-sub">Total</div></div>
+          <div class="kpi red"><div class="kpi-label">🚨 Excedentes 40min (hoje)</div><div class="kpi-value" id="kExc">—</div><div class="kpi-sub">Passaram do limite</div></div>
           <div class="kpi red"><div class="kpi-label">Improdutiva</div><div class="kpi-value" id="kImp">—</div></div>
           <div class="kpi green"><div class="kpi-label">Produtiva</div><div class="kpi-value" id="kProd">—</div></div>
           <div class="kpi blue"><div class="kpi-label">Ativo Retorno</div><div class="kpi-value" id="kRet">—</div></div>
@@ -219,28 +223,28 @@ tbody tr.bad:hover{background:#FEE2E2}
           <div class="chart-card"><h3>🏆 TOP 10 — Melhores em Tempo Logado</h3><div class="chart-wrap"><canvas id="chartTop"></canvas></div></div>
           <div class="chart-card"><h3>⚠️ TOP 10 — Piores em Tempo Logado (atenção)</h3><div class="chart-wrap"><canvas id="chartBot"></canvas></div></div>
           <div class="chart-card"><h3>📊 Distribuição por Supervisor (Top 10)</h3><div class="chart-wrap"><canvas id="chartSup"></canvas></div></div>
-          <div class="chart-card"><h3>⚖️ Mix Geral (Logado × Pausa × NR17 × Lanche)</h3><div class="chart-wrap"><canvas id="chartMix"></canvas></div></div>
+          <div class="chart-card"><h3>⚖️ Mix Geral (Logado × Pausa × Lanche × Descanso × Improd.)</h3><div class="chart-wrap"><canvas id="chartMix"></canvas></div></div>
         </div>
       </div>
 
       <div id="tab-diario" style="display:none">
         <div class="sup-section">
-          <h2>📅 TEMP LOG D-1 — Análise por Dia</h2>
-          <div class="sub">Calcula o tempo logado de UM DIA específico (diferença entre snapshots). Cada planilha é acumulada, então pegamos: <b>Dia X − Dia (X-1) = tempo trabalhado SÓ no Dia X</b>. Meta diária: <b style="color:var(--vivo)">06:20:00</b></div>
+          <h2>📅 LOG TEMP D-1 — Análise por Dia</h2>
+          <div class="sub">Calcula o tempo logado de UM DIA específico (diferença entre snapshots). Cada planilha é acumulada, então pegamos: <b>Dia X − Dia (X-1) = tempo de trabalho SÓ no Dia X</b>. Meta diário: <b style="color:var(--vivo)">06:20:00</b></div>
 
           <div class="filters-grid" style="margin-bottom:18px">
-            <div><label>📅 Data de Referência (snapshot mais novo)</label><select id="dDataAtual" onchange="renderDiario()"></select></div>
+            <div><label>📅 Dados de Referência (snapshot mais novo)</label><select id="dDataAtual" onchange="renderDiario()"></select></div>
             <div><label>📆 Comparar com (snapshot anterior)</label><select id="dDataAnt" onchange="renderDiario()"></select></div>
             <div><label>👤 Supervisor</label><select id="dSup" onchange="renderDiario()"><option value="">Todos</option></select></div>
             <div><label>Status Jornada 6:20</label><select id="dStatus" onchange="renderDiario()"><option value="">Todos</option><option value="ok">✅ Atingiram no dia</option><option value="bad">❌ Não atingiram</option></select></div>
-            <div><label>Ordenar</label><select id="dSort" onchange="renderDiario()"><option value="dia">Logado no dia (maior)</option><option value="diaa">Logado no dia (menor)</option><option value="nome">Nome A-Z</option></select></div>
+            <div><label>Ordenar</label><select id="dSort" onchange="renderDiario()"><option value="dia">Logado no dia (maior)</option><option value="diaa">Logado no dia (menor)</option><option value="nome">Nome AZ</option></select></div>
           </div>
 
           <div class="kpi-grid" style="margin-bottom:18px">
             <div class="kpi"><div class="kpi-label">📋 Operadores no Dia</div><div class="kpi-value" id="dK1">—</div></div>
             <div class="kpi green"><div class="kpi-label">✅ Atingiram 6:20</div><div class="kpi-value" id="dK2">—</div></div>
             <div class="kpi red"><div class="kpi-label">❌ Não Atingiram</div><div class="kpi-value" id="dK3">—</div></div>
-            <div class="kpi green"><div class="kpi-label">🎯 % Aderência do Dia</div><div class="kpi-value" id="dK4">—</div></div>
+            <div class="kpi green"><div class="kpi-label">🎯% Aderência do Dia</div><div class="kpi-value" id="dK4">—</div></div>
             <div class="kpi"><div class="kpi-label">⏱️ Total Logado Dia</div><div class="kpi-value" id="dK5">—</div></div>
             <div class="kpi blue"><div class="kpi-label">📊 Média por Operador</div><div class="kpi-value" id="dK6">—</div></div>
           </div>
@@ -271,7 +275,7 @@ tbody tr.bad:hover{background:#FEE2E2}
             <div><label>🔎 Filtrar supervisor</label><input type="text" id="fSupBusca" oninput="renderSupervisores()" placeholder="Nome do supervisor..."/></div>
             <div><label>Equipe / Operação</label><select id="fSupEquipe" onchange="renderSupervisores()"><option value="">Todas</option></select></div>
             <div><label>Status</label><select id="fSupStatus" onchange="renderSupervisores()"><option value="">Todos</option><option value="ok">✅ Entregando bem (≥80%)</option><option value="warn">⚠️ Atenção (50-79%)</option><option value="bad">❌ Crítico (<50%)</option></select></div>
-            <div><label>Ordenar</label><select id="fSupSort" onchange="renderSupervisores()"><option value="pct">% Aderência (menor)</option><option value="pctd">% Aderência (maior)</option><option value="ops">Nº Operadores (maior)</option><option value="nome">Nome A-Z</option></select></div>
+            <div><label>Ordenar</label><select id="fSupSort" onchange="renderSupervisores()"><option value="pct">% Aderência (menor)</option><option value="pctd">% Aderência (maior)</option><option value="ops">Nº Operadores (maior)</option><option value="nome">Nome AZ</option></select></div>
           </div>
           <div class="sup-grid" id="supGrid"></div>
         </div>
@@ -289,7 +293,7 @@ tbody tr.bad:hover{background:#FEE2E2}
               <option value="logadoasc">Tempo Logado (menor)</option>
               <option value="pausa">Pausa (maior)</option>
               <option value="improd">Improdutiva (maior)</option>
-              <option value="nome">Nome (A-Z)</option>
+              <option value="nome">Nome (AZ)</option>
             </select></div>
           </div>
         </div>
@@ -300,17 +304,162 @@ tbody tr.bad:hover{background:#FEE2E2}
             <table id="tabela"><thead><tr>
               <th>Login</th><th>Nome</th><th>Equipe</th><th>Supervisor</th>
               <th>Tempo Logado</th><th>Status</th><th>Pausa</th><th>Descanso</th><th>Lanche</th>
-              <th>NR17</th><th>Improd.</th><th>Produt.</th><th>Retorno</th>
+              <th>NR17</th><th>Improd.</th><th>Produto.</th><th>Retorno</th>
             </tr></thead><tbody></tbody></table>
           </div>
         </div>
       </div>
+      <!-- ===== POR PRODUTO ===== -->
+      <div id="tab-produto" style="display:none">
+        <div class="sup-section">
+          <h2>🎁 Análise por Produto</h2>
+          <div class="sub">Visão consolidada por PRODUTO (extraído da coluna EQUIPE). Ex: "URA CAD PRÉ - THAIS BARRETO" → produto = <b>URA CAD PRÉ</b>. <span style="color:var(--vivo);font-weight:700">NR17 removido conforme solicitado.</span></div>
+          <div class="filters-grid" style="margin-bottom:18px">
+            <div><label>🔎 Filtrar produto</label><input type="text" id="fProdBusca" oninput="renderProduto()" placeholder="Nome do produto..."/></div>
+            <div><label>Ordenar</label><select id="fProdSort" onchange="renderProduto()">
+              <option value="pct">% Aderência (menor)</option>
+              <option value="pctd">% Aderência (maior)</option>
+              <option value="ops">Nº Operadores (maior)</option>
+              <option value="exc">Excedentes (maior)</option>
+              <option value="nome">Nome AZ</option>
+            </select></div>
+          </div>
+          <div class="kpi-grid" style="margin-bottom:18px">
+            <div class="kpi"><div class="kpi-label">🎁 Total de Produtos</div><div class="kpi-value" id="pK1">—</div></div>
+            <div class="kpi green"><div class="kpi-label">👥 Operadores totais</div><div class="kpi-value" id="pK2">—</div></div>
+            <div class="kpi green"><div class="kpi-label">✅ Atingiram 6:20</div><div class="kpi-value" id="pK3">—</div></div>
+            <div class="kpi red"><div class="kpi-label">🚨 Excedentes 40min</div><div class="kpi-value" id="pK4">—</div></div>
+          </div>
+          <div class="sup-grid" id="prodGrid"></div>
+        </div>
+      </div>
+
+      <!-- ===== EXCEDENTES DE PAUSA ===== -->
+      <div id="tab-excedentes" style="display:none">
+        <div class="sup-section">
+          <h2>⏰ Excedentes de Pausa <span style="font-size:13px;font-weight:600;color:#6B7280">(limite: 40 min = D1 10' + Lanche 20' + D2 10')</span></h2>
+          <div class="sub"><b style="color:#EF4444">Atenção:</b> só aparecem os operadores que <b>REALMENTE EXTRAPOLARAM</b> o limite de 40 min em (Descanso + Lanche). Quem está dentro do limite NÃO aparece aqui. O tempo de logue 6h20 NÃO interfere neste cálculo — são análises separadas.</div>
+          <div class="filters-grid" style="margin-bottom:18px">
+            <div><label>🔎 Buscar operador</label><input type="text" id="eBusca" oninput="renderExcedentes()" placeholder="Nome, login ou supervisor..."/></div>
+            <div><label>🎁 Produto</label><select id="eProd" onchange="renderExcedentes()"><option value="">Todos</option></select></div>
+            <div><label>👤 Supervisor</label><select id="eSup" onchange="renderExcedentes()"><option value="">Todos</option></select></div>
+            <div><label>Modo de visão</label><select id="eModo" onchange="renderExcedentes()">
+              <option value="hoje">📅 Instantâneo atual (acumulado)</option>
+              <option value="dia">📊 Dia específico (D-1) — só o que excedeu nesse dia</option>
+              <option value="acum">🏆 Ranking ACUMULADO (todos os dias)</option>
+            </select></div>
+            <div><label>Ordenar</label><select id="eSort" onchange="renderExcedentes()">
+              <option value="exc">Maior excedente</option>
+              <option value="dias">Mais dias excedendo</option>
+              <option value="nome">Nome AZ</option>
+            </select></div>
+          </div>
+          <div id="eD1Badge" style="display:none;margin-bottom:14px;padding:12px 16px;background:linear-gradient(135deg,#FEF3C7,#FDE68A);border:2px solid #F59E0B;border-radius:10px;font-size:13px;font-weight:700;color:#92400E"></div>
+          <div class="kpi-grid" style="margin-bottom:18px">
+            <div class="kpi red"><div class="kpi-label">🚨 Excedentes (visão atual)</div><div class="kpi-value" id="eK1">—</div></div>
+            <div class="kpi amber"><div class="kpi-label">⏱️ Tempo Excedido Total</div><div class="kpi-value" id="eK2">—</div></div>
+            <div class="kpi"><div class="kpi-label">📊 Média Excedida/Op.</div><div class="kpi-value" id="eK3">—</div></div>
+            <div class="kpi red"><div class="kpi-label">🔥 Reincidente (Top)</div><div class="kpi-value" id="eK4" style="font-size:16px">—</div></div>
+          </div>
+          <div class="table-card">
+            <div class="table-head"><h3 id="eTitulo">Operadores que excederam 40 min</h3><span id="eCount" style="color:#6B7280;font-size:12px;font-weight:600"></span></div>
+            <div class="tbl-wrap">
+              <table id="tabelaExc"><thead><tr>
+                <th>#</th><th>Nome Completo</th><th>Supervisor</th><th>Produto</th>
+                <th>Descanso</th><th>Lanche</th><th>Pausa Total</th>
+                <th>Limite</th><th>Excedeu</th><th id="eColAcum" style="display:none">Dias</th><th id="eColTotalAcum" style="display:none">Total Acum.</th>
+              </tr></thead><tbody></tbody></table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ADERÊNCIA GERAL (TOP PERFORMERS) ===== -->
+      <div id="tab-aderencia" style="display:none">
+        <div class="sup-section">
+          <h2>🎯 Aderência Geral <span style="font-size:13px;font-weight:600;color:#6B7280">(Logue ≥ 6h20 <b>E</b> Pausa ≤ 40 min)</span></h2>
+          <div class="sub"><b style="color:#10B981">Termômetro do operador ideal</b> — cumpre a jornada DE 6h20 <u>E</u> respeitando o limite de 40 min em (descanso + lanche). Use o ranking ACUMULADO para premiar os melhores desempenhos do mês.</div>
+          <div class="filters-grid" style="margin-bottom:18px">
+            <div><label>🔎 Buscar</label><input type="text" id="aBusca" oninput="renderAderencia()" placeholder="Nome, login ou supervisor..."/></div>
+            <div><label>🎁 Produto</label><select id="aProd" onchange="renderAderencia()"><option value="">Todos</option></select></div>
+            <div><label>👤 Supervisor</label><select id="aSup" onchange="renderAderencia()"><option value="">Todos</option></select></div>
+            <div><label>Modo de visão</label><select id="aModo" onchange="renderAderencia()">
+              <option value="hoje">📅 Instantâneo atual (acumulado)</option>
+              <option value="dia">📊 Dia específico (D-1) — só desempenho desse dia</option>
+              <option value="acum">🏆 Ranking ACUMULADO (todos os dias)</option>
+            </select></div>
+            <div><label>Ordenar</label><select id="aSort" onchange="renderAderencia()">
+              <option value="dias">Mais dias aderentes</option>
+              <option value="logado">Maior tempo logado</option>
+              <option value="nome">Nome AZ</option>
+            </select></div>
+          </div>
+          <div id="aD1Badge" style="display:none;margin-bottom:14px;padding:12px 16px;background:linear-gradient(135deg,#D1FAE5,#A7F3D0);border:2px solid #10B981;border-radius:10px;font-size:13px;font-weight:700;color:#065F46"></div>
+          <div class="kpi-grid" style="margin-bottom:18px">
+            <div class="kpi green"><div class="kpi-label">⭐ Melhores desempenhos (reais)</div><div class="kpi-value" id="aK1">—</div></div>
+            <div class="kpi"><div class="kpi-label">📊 % Aderência Geral</div><div class="kpi-value" id="aK2">—</div></div>
+            <div class="kpi blue"><div class="kpi-label">⏱️ Logado Médio (topo)</div><div class="kpi-value" id="aK3">—</div></div>
+            <div class="kpi green"><div class="kpi-label">🏆 Recordista Acum.</div><div class="kpi-value" id="aK4" style="font-size:16px">—</div></div>
+          </div>
+          <div class="table-card">
+            <div class="table-head"><h3>Operadores Aderentes (Logue OK + Pausa OK)</h3><span id="aCount" style="color:#6B7280;font-size:12px;font-weight:600"></span></div>
+            <div class="tbl-wrap">
+              <table id="tabelaAder"><thead><tr>
+                <th>#</th><th>Nome Completo</th><th>Supervisor</th><th>Produto</th>
+                <th>Tempo Logado</th><th>Pausa Total</th><th>Status</th>
+                <th id="aColDias" style="display:none">Dias Aderentes</th>
+              </tr></thead><tbody></tbody></table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SEM LOGUE 6:20 ===== -->
+      <div id="tab-logue" style="display:none">
+        <div class="sup-section">
+          <h2>⛔ Operadores SEM Cumprimento de Logue 6h20</h2>
+          <div class="sub">Lista de operadores que <b style="color:#EF4444">NÃO atingiram</b> uma jornada mínima de 6h20min. Esta análise é <b>independente</b> do controle de pausas — aqui foca apenas no tempo logado.</div>
+          <div class="filters-grid" style="margin-bottom:18px">
+            <div><label>🔎 Buscar</label><input type="text" id="lBusca" oninput="renderLogue()" placeholder="Nome, login ou supervisor..."/></div>
+            <div><label>🎁 Produto</label><select id="lProd" onchange="renderLogue()"><option value="">Todos</option></select></div>
+            <div><label>👤 Supervisor</label><select id="lSup" onchange="renderLogue()"><option value="">Todos</option></select></div>
+            <div><label>Modo de visão</label><select id="lModo" onchange="renderLogue()">
+              <option value="hoje">📅 Instantâneo atual (acumulado)</option>
+              <option value="dia">📊 Dia específico (D-1) — só falha desse dia</option>
+              <option value="acum">🏆 Ranking ACUMULADO (todos os dias)</option>
+            </select></div>
+            <div><label>Ordenar</label><select id="lSort" onchange="renderLogue()">
+              <option value="falta">Maior déficit</option>
+              <option value="dias">Mais dias sem cumprir</option>
+              <option value="nome">Nome AZ</option>
+            </select></div>
+          </div>
+          <div id="lD1Badge" style="display:none;margin-bottom:14px;padding:12px 16px;background:linear-gradient(135deg,#FEE2E2,#FECACA);border:2px solid #EF4444;border-radius:10px;font-size:13px;font-weight:700;color:#991B1B"></div>
+          <div class="kpi-grid" style="margin-bottom:18px">
+            <div class="kpi red"><div class="kpi-label">❌ Sem Logue (visão atual)</div><div class="kpi-value" id="lK1">—</div></div>
+            <div class="kpi amber"><div class="kpi-label">⏱️ Déficit total</div><div class="kpi-value" id="lK2">—</div></div>
+            <div class="kpi"><div class="kpi-label">📊 Déficit Médio</div><div class="kpi-value" id="lK3">—</div></div>
+            <div class="kpi red"><div class="kpi-label">🔥 Reincidente (Top)</div><div class="kpi-value" id="lK4" style="font-size:16px">—</div></div>
+          </div>
+          <div class="table-card">
+            <div class="table-head"><h3>Operadores abaixo de 6h20</h3><span id="lCount" style="color:#6B7280;font-size:12px;font-weight:600"></span></div>
+            <div class="tbl-wrap">
+              <table id="tabelaLog"><thead><tr>
+                <th>#</th><th>Nome Completo</th><th>Supervisor</th><th>Produto</th>
+                <th>Tempo Logado</th><th>Meta</th><th>Déficit</th>
+                <th id="lColDias" style="display:none">Dias Faltando</th>
+              </tr></thead><tbody></tbody></table>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div id="emptyState" class="empty-state">
       <div class="empty-state-icon">📂</div>
       <h2 style="color:var(--vivo);margin-bottom:8px;">Nenhuma planilha importada</h2>
-      <p>Importe o arquivo Konecta acima para visualizar o dashboard completo</p>
+      <p>Importe o arquivo Konecta acima para visualizar o painel completo</p>
     </div>
 
   </div>
@@ -330,7 +479,8 @@ tbody tr.bad:hover{background:#FEE2E2}
 
 <script>
 const STORE='konecta_wde_snapshots_v2';
-const JORNADA_MIN=6*3600+20*60; // 6h20min em SEGUNDOS
+const JORNADA_MIN=6*3600+20*60; // 6h20min em SEGUNDOS (tempo logado mínimo)
+const LIMITE_PAUSA=40*60; // 40 min em SEGUNDOS (D1 10' + Lanche 20' + D2 10') — separado do logue
 let DB={snaps:{},atual:null};
 let chartTop,chartBot,chartSup,chartMix;
 
@@ -342,52 +492,52 @@ function load(){try{const r=localStorage.getItem(STORE);if(r)DB=JSON.parse(r);}c
 function save(){localStorage.setItem(STORE,JSON.stringify(DB));}
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500)}
 
-function entrar(){const h=document.getElementById('hero');h.style.opacity='0';setTimeout(()=>{h.style.display='none';document.getElementById('app').style.display='block';refreshSnapList();},700)}
+function entrar(){const h=document.getElementById('hero');h.style.opacity='0';setTimeout(()=>{h.style.display='none';document.getElementById('app').style.display='block';refreshSnapList();if(DB.atual&&DB.snaps[DB.atual])carregarSnap(DB.atual);},700)}
 
-// ============ CONVERSÃO TEMPO ============
+// ============ TEMPO DE CONVERSÃO ============
 // Aceita: número (excel serial - fração de dia), string HH:MM:SS, ou string vazia
-// Retorna: SEGUNDOS
-function toSec(v){
-  if(v==null||v==='-'||v==='')return 0;
-  if(typeof v==='number'){
+// : SEGUNDOS
+função paraSec(v){
+  if(v==null||v==='-'||v==='')retorne 0;
+  se(tipo de v==='número'){
     // Excel guarda HH:MM:SS como fração de 1 dia (1 = 24h)
-    return Math.round(v*86400);
+    retornar Math.round(v*86400);
   }
   const s=String(v).trim();
   if(!s||s==='-')return 0;
-  // Tenta parse como número (string com vírgula/ponto)
+  // Tenta analisar como número (string com vírgula/ponto)
   const num=parseFloat(s.replace(',','.'));
   if(!isNaN(num)&&!s.includes(':')){
     // Se for número grande (>30), é provavelmente segundos ou horas decimais
-    // Mas no excel sheet_to_json com raw:true sempre vem como number já tratado acima
-    return Math.round(num*86400);
+    // Mas no excel sheet_to_json com raw:true sempre vem como número já tratado acima
+    retorne Math.round(num*86400);
   }
-  // Parse HH:MM:SS
+  // Analisar HH:MM:SS
   const p=s.split(':').map(Number);
-  if(p.length<2||p.some(isNaN))return 0;
-  let h=p[0]||0, m=p[1]||0, sec=p[2]||0;
-  return h*3600+m*60+sec;
+  if(p.length<2||p.some(isNaN))retorna 0;
+  seja h=p[0]||0, m=p[1]||0, sec=p[2]||0;
+  retornar h*3600+m*60+seg;
 }
-function fmtHMS(sec){
+função fmtHMS(sec){
   if(!sec||isNaN(sec))return '00:00:00';
-  sec=Math.max(0,Math.round(sec));
+  seg=Math.max(0,Math.round(seg));
   const h=Math.floor(sec/3600);
   const m=Math.floor((sec%3600)/60);
   const s=sec%60;
-  return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  retornar String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
 }
 
 // Extrai supervisor da equipe. Ex: "PÚRPURA ESPECIALISTA - ICARO LIMA" → "ICARO LIMA"
-function extrairSupervisor(equipe){
-  if(!equipe)return '—';
+função extrairSupervisor(equipamento){
+  se(!equipar)retorne '—';
   const partes=String(equipe).split(/\s*[-–—]\s*/);
   if(partes.length>=2)return partes[partes.length-1].trim();
-  return equipe.trim();
+  retornar equipe.trim();
 }
-function extrairProduto(equipe){
-  if(!equipe)return '—';
+function extrairProduto(equipar){
+  se(!equipar)retorne '—';
   const partes=String(equipe).split(/\s*[-–—]\s*/);
-  return partes[0].trim();
+  retornar partes[0].trim();
 }
 
 // ============ LEITURA EXCEL ============
@@ -397,39 +547,39 @@ dz.addEventListener('dragleave',()=>dz.classList.remove('drag'));
 dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag');if(e.dataTransfer.files[0])lerArquivo(e.dataTransfer.files[0])});
 fi.addEventListener('change',e=>{if(e.target.files[0])lerArquivo(e.target.files[0])});
 
-function lerArquivo(file){
-  toast('📂 Lendo planilha...');
-  const r=new FileReader();
+função lerArquivo(arquivo){
+  brinde('📂 Lendo planilha...');
+  const r=novo FileReader();
   r.onload=ev=>{
-    try{
+    tentar{
       const wb=XLSX.read(ev.target.result,{type:'array',cellDates:false});
       let aba=wb.SheetNames.find(n=>n.toLowerCase().replace(/[\s_-]/g,'').includes('wdeoperador'));
       if(!aba)aba=wb.SheetNames.find(n=>n.toLowerCase().includes('wde'));
-      if(!aba){toast('⚠️ Aba "WDE Operador" não encontrada');return}
+      if(!aba){toast('⚠️ Aba "Operador WDE" não encontrado');return}
       const ws=wb.Sheets[aba];
       // raw:true mantém os números como NÚMEROS (não converte pra texto formatado)
       const rows=XLSX.utils.sheet_to_json(ws,{header:1,defval:'',raw:true});
-      processar(rows,file.name);
+      processar(linhas, nome.arquivo);
     }catch(e){toast('❌ Erro ao ler: '+e.message);console.error(e)}
   };
-  r.readAsArrayBuffer(file);
+  r.readAsArrayBuffer(arquivo);
 }
 
-function processar(rows,nomeArq){
-  // localiza header
-  let hi=-1;
+function processar(linhas,nomeArq){
+  // cabeçalho local
+  seja hi=-1;
   for(let i=0;i<Math.min(rows.length,25);i++){
     const linha=(rows[i]||[]).map(c=>String(c||'').toUpperCase());
     if(linha.some(c=>c.includes('LOGIN'))&&linha.some(c=>c.includes('NOME')||c.includes('OPERADOR'))){hi=i;break;}
   }
   if(hi<0){toast('⚠️ Cabeçalho não localizado na planilha');return}
   const head=(rows[hi]||[]).map(c=>String(c||'').toUpperCase().trim().replace(/\s+/g,' '));
-  function idx(...termos){
-    for(const t of termos){
+  função idx(...termos){
+    para (const t de termos){
       const i=head.findIndex(h=>h.includes(t));
-      if(i>=0)return i;
+      se(i>=0)retorne i;
     }
-    return -1;
+    retornar -1;
   }
   const cols={
     login:idx('LOGIN'),
@@ -442,12 +592,12 @@ function processar(rows,nomeArq){
     lanche:idx('LANCHE'),
     nr17:idx('NR17','NR 17'),
     improd:idx('IMPRODUTIVA'),
-    produt:idx('PRODUTIVA'),
-    retorno:idx('RETORNO')
+    produto:idx('PRODUTIVA'),
+    :idx('RETORNO')
   };
   // Garante que LOGIN CLIENTE não pega o mesmo de LOGIN
   if(cols.login===cols.loginCli){
-    const indices=[];head.forEach((h,i)=>{if(h.includes('LOGIN'))indices.push(i)});
+    const índices=[];head.forEach((h,i)=>{if(h.includes('LOGIN'))indices.push(i)});
     if(indices.length>=2){cols.login=indices[0];cols.loginCli=indices[1]}
   }
 
@@ -462,15 +612,15 @@ function processar(rows,nomeArq){
       loginCli:String(r[cols.loginCli]||'').trim(),
       nome,
       equipe,
-      supervisor:extrairSupervisor(equipe),
-      produto:extrairProduto(equipe),
+      supervisor:extrairSupervisor(equipar),
+      produto:extrairProduto(equipar),
       logado:toSec(r[cols.logado]),
       pausa:toSec(r[cols.pausa]),
       descanso:toSec(r[cols.descanso]),
       lanche:toSec(r[cols.lanche]),
       nr17:toSec(r[cols.nr17]),
       improd:toSec(r[cols.improd]),
-      produt:toSec(r[cols.produt]),
+      produto:paraSec(r[cols.produto]),
       retorno:toSec(r[cols.retorno])
     });
   }
@@ -479,36 +629,36 @@ function processar(rows,nomeArq){
   const ts=new Date().toLocaleString('pt-BR');
   DB.snaps[hoje]={data:hoje,timestamp:ts,arquivo:nomeArq,dados};
   DB.atual=hoje;save();refreshSnapList();carregarSnap(hoje);
-  toast(`✅ ${dados.length} operadores carregados!`);
+  brinde(`✅ ${dados.length} operadores carregados!`);
 }
 
-function refreshSnapList(){
+função refreshSnapList(){
   const sel=document.getElementById('snapSelect');
   const datas=Object.keys(DB.snaps).sort().reverse();
   if(!datas.length){document.getElementById('dataNav').style.display='none';return}
   document.getElementById('dataNav').style.display='flex';
   sel.innerHTML=datas.map(d=>{const s=DB.snaps[d];return `<option value="${d}">${formatarData(d)} — ${s.dados.length} operadores</option>`}).join('');
-  if(DB.atual)sel.value=DB.atual;
+  se(DB.atual)sel.value=DB.atual;
 }
 function formatarData(d){const [y,m,dd]=d.split('-');return `${dd}/${m}/${y}`;}
 
-function carregarSnap(dataKey){
+função carregarSnap(dataKey){
   const snap=DB.snaps[dataKey];if(!snap)return;
-  DB.atual=dataKey;save();
+  DB.atual=dataKey;salvar();
   document.getElementById('emptyState').style.display='none';
   document.getElementById('dashboard').style.display='block';
   document.getElementById('snapBadge').innerHTML=`📌 Snapshot ${formatarData(dataKey)} · ${snap.timestamp}`;
-  // popula filtros
+  // povoar
   const equipes=[...new Set(snap.dados.map(d=>d.equipe).filter(Boolean))].sort();
   const supervs=[...new Set(snap.dados.map(d=>d.supervisor).filter(s=>s&&s!=='—'))].sort();
   document.getElementById('fEquipe').innerHTML='<option value="">Todas ('+equipes.length+')</option>'+equipes.map(e=>`<option value="${e}">${e}</option>`).join('');
   document.getElementById('fSupervisor').innerHTML='<option value="">Todos ('+supervs.length+')</option>'+supervs.map(s=>`<option value="${s}">${s}</option>`).join('');
   document.getElementById('fSupEquipe').innerHTML='<option value="">Todas</option>'+equipes.map(e=>`<option value="${e}">${e}</option>`).join('');
-  render();
+  renderizar();
   renderSupervisores();
 }
 
-function aplicarFiltros(){
+função aplicarFiltros(){
   const snap=DB.snaps[DB.atual];if(!snap)return [];
   let arr=[...snap.dados];
   const q=(document.getElementById('fBusca').value||'').toLowerCase().trim();
@@ -519,17 +669,17 @@ function aplicarFiltros(){
   if(sup)arr=arr.filter(d=>d.supervisor===sup);
   if(eq)arr=arr.filter(d=>d.equipe===eq);
   if(jor==='ok')arr=arr.filter(d=>d.logado>=JORNADA_MIN);
-  if(jor==='bad')arr=arr.filter(d=>d.logado<JORNADA_MIN);
+  if(jor==='ruim')arr=arr.filter(d=>d.logado<JORNADA_MIN);
   const s=document.getElementById('fSort').value;
   if(s==='logado')arr.sort((a,b)=>b.logado-a.logado);
-  else if(s==='logadoasc')arr.sort((a,b)=>a.logado-b.logado);
-  else if(s==='pausa')arr.sort((a,b)=>b.pausa-a.pausa);
-  else if(s==='improd')arr.sort((a,b)=>b.improd-a.improd);
-  else if(s==='nome')arr.sort((a,b)=>a.nome.localeCompare(b.nome));
-  return arr;
+  senão if(s==='logadoasc')arr.sort((a,b)=>a.logado-b.logado);
+  senão if(s==='pausa')arr.sort((a,b)=>b.pausa-a.pausa);
+  senão se(s==='improd')arr.sort((a,b)=>b.improd-a.improd);
+  senão if(s==='nome')arr.sort((a,b)=>a.nome.localeCompare(b.nome));
+  retornar arr;
 }
 
-function render(){
+função renderizar(){
   const arr=aplicarFiltros();
   const sum=k=>arr.reduce((s,d)=>s+(d[k]||0),0);
   const ating=arr.filter(d=>d.logado>=JORNADA_MIN).length;
@@ -540,9 +690,11 @@ function render(){
   document.getElementById('kLog').textContent=fmtHMS(sum('logado'));
   document.getElementById('kPause').textContent=fmtHMS(sum('pausa'));
   document.getElementById('kBreak').textContent=fmtHMS(sum('lanche')+sum('descanso'));
-  document.getElementById('kNR17').textContent=fmtHMS(sum('nr17'));
+  // KPI Excedentes (operadores que passaram dos 40min = 2400s em descanso+lanche)
+  const excHoje=arr.filter(d=>(d.descanso+d.lanche)>LIMITE_PAUSA).length;
+  document.getElementById('kExc').textContent=excHoje;
   document.getElementById('kImp').textContent=fmtHMS(sum('improd'));
-  document.getElementById('kProd').textContent=fmtHMS(sum('produt'));
+  document.getElementById('kProd').textContent=fmtHMS(sum('produto'));
   document.getElementById('kRet').textContent=fmtHMS(sum('retorno'));
   document.getElementById('kAvgLog').textContent=fmtHMS(arr.length?sum('logado')/arr.length:0);
   document.getElementById('kAder').textContent=arr.length?((ating/arr.length)*100).toFixed(1)+'%':'—';
@@ -551,7 +703,7 @@ function render(){
   const tb=document.querySelector('#tabela tbody');
   tb.innerHTML=arr.slice(0,800).map(d=>{
     const ok=d.logado>=JORNADA_MIN;
-    return `<tr class="${ok?'':'bad'}">
+    retornar `<tr class="${ok?'':'ruim'}">
       <td><b>${d.login}</b></td><td>${d.nome}</td>
       <td style="font-size:11px;color:#6B7280">${d.equipe}</td>
       <td style="font-weight:700;color:var(--vivo)">${d.supervisor}</td>
@@ -562,55 +714,55 @@ function render(){
       <td style="color:#EF4444;font-weight:700">${fmtHMS(d.improd)}</td>
       <td style="color:#10B981;font-weight:700">${fmtHMS(d.produt)}</td>
       <td>${fmtHMS(d.retorno)}</td></tr>`;
-  }).join('');
+  }).juntar('');
   document.getElementById('tblCount').textContent=`${arr.length} operador(es)${arr.length>800?' — exibindo 800':''}`;
 
-  drawCharts(arr);
+  desenharGráficos(arr);
 }
 
-function drawCharts(arr){
+função desenharGráficos(arr){
   // Top 10 melhores
   const top=[...arr].sort((a,b)=>b.logado-a.logado).slice(0,10);
   if(chartTop)chartTop.destroy();
   chartTop=new Chart(document.getElementById('chartTop'),{type:'bar',data:{
     labels:top.map(d=>d.nome.split(' ').slice(0,2).join(' ')),
-    datasets:[{label:'HH:MM:SS',data:top.map(d=>+(d.logado/3600).toFixed(2)),
+    conjuntos de dados:[{rótulo:'HH:MM:SS',dados:top.map(d=>+(d.logado/3600).toFixed(2)),
       backgroundColor:'rgba(16,185,129,.85)',borderColor:'#059669',borderWidth:1,borderRadius:6}]},
-    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmtHMS(c.parsed.x*3600)}}},scales:{x:{title:{display:true,text:'Horas',color:'#6B7280',font:{size:10}},ticks:{color:'#10B981',font:{weight:600}}},y:{ticks:{color:'#1E1B4B',font:{size:11,weight:600}}}}}});
+    opções:{eixoÍndice:'y',responsivo:true,manterProporção:false,plugins:{legenda:{exibir:false},dica:{callbacks:{rótulo:c=>fmtHMS(c.parsed.x*3600)}}},escalas:{x:{título:{exibir:true,texto:'Horas',cor:'#6B7280',fonte:{tamanho:10}},marcadores:{cor:'#10B981',fonte:{peso:600}}},y:{marcadores:{cor:'#1E1B4B',fonte:{tamanho:11,peso:600}}}}}});
 
   // Top 10 piores
   const bot=[...arr].sort((a,b)=>a.logado-b.logado).slice(0,10);
   if(chartBot)chartBot.destroy();
   chartBot=new Chart(document.getElementById('chartBot'),{type:'bar',data:{
     labels:bot.map(d=>d.nome.split(' ').slice(0,2).join(' ')),
-    datasets:[{label:'HH:MM:SS',data:bot.map(d=>+(d.logado/3600).toFixed(2)),
+    conjuntos de dados:[{rótulo:'HH:MM:SS',dados:bot.map(d=>+(d.logado/3600).toFixed(2)),
       backgroundColor:'rgba(239,68,68,.85)',borderColor:'#B91C1C',borderWidth:1,borderRadius:6}]},
-    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmtHMS(c.parsed.x*3600)}}},scales:{x:{ticks:{color:'#EF4444',font:{weight:600}}},y:{ticks:{color:'#1E1B4B',font:{size:11,weight:600}}}}}});
+    opções:{eixoÍndice:'y',responsivo:true,manterProporção:false,plugins:{legenda:{exibir:false},dica:{callbacks:{rótulo:c=>fmtHMS(c.parsed.x*3600)}}},escalas:{x:{marcadores:{cor:'#EF4444',fonte:{peso:600}}},y:{marcadores:{cor:'#1E1B4B',fonte:{tamanho:11,peso:600}}}}}});
 
-  // Top supervisores
+  // Supervisores de topo
   const mapS={};arr.forEach(d=>{if(!d.supervisor||d.supervisor==='—')return;mapS[d.supervisor]=(mapS[d.supervisor]||0)+d.logado});
   const ordS=Object.entries(mapS).sort((a,b)=>b[1]-a[1]).slice(0,10);
   if(chartSup)chartSup.destroy();
   chartSup=new Chart(document.getElementById('chartSup'),{type:'bar',data:{
-    labels:ordS.map(o=>o[0]),
-    datasets:[{label:'Horas Logadas',data:ordS.map(o=>+(o[1]/3600).toFixed(2)),
+    rótulos:ordS.map(o=>o[0]),
+    conjuntos de dados:[{label:'Horas Logadas',data:ordS.map(o=>+(o[1]/3600).toFixed(2)),
       backgroundColor:'rgba(168,85,247,.85)',borderColor:'#660099',borderWidth:1,borderRadius:6}]},
-    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmtHMS(c.parsed.x*3600)}}},scales:{x:{ticks:{color:'#660099',font:{weight:600}}},y:{ticks:{color:'#1E1B4B',font:{size:10,weight:600}}}}}});
+    opções:{eixoÍndice:'y',responsivo:true,manterProporção:false,plugins:{legenda:{exibir:false},dica:{callbacks:{rótulo:c=>fmtHMS(c.parsed.x*3600)}}},escalas:{x:{marcadores:{cor:'#660099',fonte:{peso:600}}},y:{marcadores:{cor:'#1E1B4B',fonte:{tamanho:10,peso:600}}}}}});
 
   // Mix
   const sum=k=>arr.reduce((s,d)=>s+(d[k]||0),0);
   if(chartMix)chartMix.destroy();
   chartMix=new Chart(document.getElementById('chartMix'),{type:'doughnut',data:{
-    labels:['Logado','Pausa','NR17','Lanche','Descanso','Improdutiva'],
-    datasets:[{data:[sum('logado'),sum('pausa'),sum('nr17'),sum('lanche'),sum('descanso'),sum('improd')].map(v=>+(v/3600).toFixed(2)),
-      backgroundColor:['#10B981','#F59E0B','#8B19C8','#3B82F6','#06B6D4','#EF4444'],borderWidth:3,borderColor:'#fff'}]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:11,weight:600},color:'#1E1B4B'}},tooltip:{callbacks:{label:c=>c.label+': '+fmtHMS(c.parsed*3600)}}}}});
+    rótulos:['Logado','Pausa','Lanche','Descanso','Improdutiva'],
+    conjuntos de dados:[{dados:[sum('logado'),sum('pausa'),sum('lanche'),sum('descanso'),sum('improd')].map(v=>+(v/3600).toFixed(2)),
+      backgroundColor:['#10B981','#F59E0B','#3B82F6','#06B6D4','#EF4444'],borderWidth:3,borderColor:'#fff'}]},
+    opções:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:11,weight:600},color:'#1E1B4B'}},tooltip:{callbacks:{label:c=>c.label+': '+fmtHMS(c.parsed*3600)}}}}});
 }
 
 // ============ SUPERVISORES (com visão D-1) ============
-function renderSupervisores(){
+função renderizarSupervisores(){
   const snap=DB.snaps[DB.atual];if(!snap)return;
-  // Snapshot anterior pra calcular logue D-1
+  // Instantâneo anterior para calcular log D-1
   const datas=Object.keys(DB.snaps).sort();
   const idxAtual=datas.indexOf(DB.atual);
   const dataAnt=idxAtual>0?datas[idxAtual-1]:null;
@@ -621,7 +773,7 @@ function renderSupervisores(){
   let arr=[...snap.dados];
   const eq=document.getElementById('fSupEquipe').value;
   if(eq)arr=arr.filter(d=>d.equipe===eq);
-  // agrupa por supervisor
+  // agrupar por supervisor
   const grupos={};
   arr.forEach(d=>{
     if(!d.supervisor||d.supervisor==='—')return;
@@ -632,7 +784,7 @@ function renderSupervisores(){
     grupos[d.supervisor].ops.push({...d,logadoDia});
     grupos[d.supervisor].equipes.add(d.equipe);
   });
-  let lista=Object.values(grupos).map(g=>{
+  deixe lista=Object.values(grupos).map(g=>{
     const total=g.ops.length;
     const ating=g.ops.filter(o=>o.logado>=JORNADA_MIN).length;
     const atingDia=g.ops.filter(o=>o.logadoDia>=JORNADA_MIN).length;
@@ -652,22 +804,22 @@ function renderSupervisores(){
   if(q)lista=lista.filter(g=>g.nome.toLowerCase().includes(q));
   const st=document.getElementById('fSupStatus').value;
   if(st==='ok')lista=lista.filter(g=>g.pct>=80);
-  else if(st==='warn')lista=lista.filter(g=>g.pct>=50&&g.pct<80);
-  else if(st==='bad')lista=lista.filter(g=>g.pct<50);
+  senão se(st==='aviso')lista=lista.filter(g=>g.pct>=50&&g.pct<80);
+  senão se(st==='ruim')lista=lista.filter(g=>g.pct<50);
   const ord=document.getElementById('fSupSort').value;
   if(ord==='pct')lista.sort((a,b)=>a.pct-b.pct);
-  else if(ord==='pctd')lista.sort((a,b)=>b.pct-a.pct);
-  else if(ord==='ops')lista.sort((a,b)=>b.total-a.total);
-  else if(ord==='nome')lista.sort((a,b)=>a.nome.localeCompare(b.nome));
+  senão se(ord==='pctd')lista.sort((a,b)=>b.pct-a.pct);
+  senão se(ord==='ops')lista.sort((a,b)=>b.total-a.total);
+  senão if(ord==='nome')lista.sort((a,b)=>a.nome.localeCompare(b.nome));
 
   const grid=document.getElementById('supGrid');
   if(!lista.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:#9CA3AF;">Nenhum supervisor encontrado</div>';return}
   grid.innerHTML=lista.map(g=>{
     let cls='ok',fcls='';
-    if(g.pct<50){cls='bad';fcls='bad'}
-    else if(g.pct<80){cls='';fcls='warn'}
+    if(g.pct<50){cls='ruim';fcls='ruim'}
+    senão se(g.pct<80){cls='';fcls='aviso'}
     const dataDiaLbl=snapAnt?`D-1 (${formatarData(dataAnt)}→${formatarData(DB.atual)})`:'Acumulado';
-    return `<div class="sup-card ${cls}">
+    retornar `<div class="sup-card ${cls}">
       <div class="sup-name">👤 ${g.nome}<div style="font-size:10px;color:#6B7280;font-weight:600;margin-top:2px;text-transform:uppercase;letter-spacing:.5px">${[...g.equipes].slice(0,2).join(', ')}${g.equipes.size>2?'…':''}</div></div>
       <div class="sup-stats">
         <div class="sup-stat"><div class="l">Operadores</div><div class="v">${g.total}</div></div>
@@ -687,43 +839,50 @@ function renderSupervisores(){
       <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#6B7280;font-weight:700;text-transform:uppercase">% Aderência Acumulada</span><span style="font-size:18px;font-weight:900;color:${g.pct>=80?'#10B981':g.pct>=50?'#F59E0B':'#EF4444'}">${g.pct.toFixed(1)}%</span></div>
       <div class="sup-pct"><div class="sup-pct-fill ${fcls}" style="width:${g.pct.toFixed(1)}%"></div></div>
     </div>`;
-  }).join('');
+  }).juntar('');
 }
 
-function trocaTab(tab,btn){
+função trocaTab(tab,btn){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  btn.classList.add('active');
-  ['geral','diario','supervisor','operadores'].forEach(t=>document.getElementById('tab-'+t).style.display=(t===tab?'block':'none'));
+  btn.classList.add('ativo');
+  ['geral','produto','excedentes','aderência','logue','diário','supervisor','operadores'].forEach(t=>{
+    const el=document.getElementById('tab-'+t);
+    if(el)el.style.display=(t===tab?'block':'none');
+  });
   if(tab==='supervisor')renderSupervisores();
   if(tab==='diario')initDiario();
+  if(tab==='produto')renderProduto();
+  if(tab==='excedentes')initExcedentes();
+  if(tab==='aderência')initAderência();
+  if(tab==='logue')initLogue();
 }
 
 // ============ DIÁRIO D-1 ============
 let chartDiaTop,chartDiaBot;
-function initDiario(){
+função initDiario(){
   const datas=Object.keys(DB.snaps).sort();
-  if(datas.length<1){toast('⚠️ Importe pelo menos 1 snapshot');return}
+  if(datas.length<1){toast('⚠️ Importar pelo menos 1 snapshot');return}
   const selA=document.getElementById('dDataAtual');
   const selB=document.getElementById('dDataAnt');
   selA.innerHTML=datas.slice().reverse().map(d=>`<option value="${d}">${formatarData(d)} — ${DB.snaps[d].dados.length} ops</option>`).join('');
   selB.innerHTML='<option value="">— Comparar com vazio (mostrar acumulado) —</option>'+datas.slice().reverse().map(d=>`<option value="${d}">${formatarData(d)}</option>`).join('');
   if(datas.length>=2){selA.value=datas[datas.length-1];selB.value=datas[datas.length-2]}
-  else {selA.value=datas[0];selB.value=''}
+  senão {selA.value=datas[0];selB.value=''}
   const snap=DB.snaps[selA.value];
   const sups=[...new Set(snap.dados.map(d=>d.supervisor).filter(s=>s&&s!=='—'))].sort();
   document.getElementById('dSup').innerHTML='<option value="">Todos ('+sups.length+')</option>'+sups.map(s=>`<option value="${s}">${s}</option>`).join('');
-  renderDiario();
+  renderDiário();
 }
 
-function renderDiario(){
+função renderizarDiário(){
   const dA=document.getElementById('dDataAtual').value;
   const dB=document.getElementById('dDataAnt').value;
-  if(!dA)return;
+  se(!dA)retorne;
   const snapA=DB.snaps[dA];if(!snapA)return;
   const snapB=dB?DB.snaps[dB]:null;
   const mapAnt={};
   if(snapB)snapB.dados.forEach(o=>{const k=(o.login||o.nome).toLowerCase();mapAnt[k]=o});
-  let lista=snapA.dados.map(o=>{
+  deixe lista=snapA.dados.map(o=>{
     const k=(o.login||o.nome).toLowerCase();
     const ant=mapAnt[k];
     const logadoDia=ant?Math.max(0,o.logado-ant.logado):o.logado;
@@ -733,11 +892,11 @@ function renderDiario(){
   if(sup)lista=lista.filter(d=>d.supervisor===sup);
   const st=document.getElementById('dStatus').value;
   if(st==='ok')lista=lista.filter(d=>d.logadoDia>=JORNADA_MIN);
-  else if(st==='bad')lista=lista.filter(d=>d.logadoDia<JORNADA_MIN);
+  senão if(st==='ruim')lista=lista.filter(d=>d.logadoDia<JORNADA_MIN);
   const ord=document.getElementById('dSort').value;
   if(ord==='dia')lista.sort((a,b)=>b.logadoDia-a.logadoDia);
-  else if(ord==='diaa')lista.sort((a,b)=>a.logadoDia-b.logadoDia);
-  else if(ord==='nome')lista.sort((a,b)=>a.nome.localeCompare(b.nome));
+  senão if(ord==='diaa')lista.sort((a,b)=>a.logadoDia-b.logadoDia);
+  senão if(ord==='nome')lista.sort((a,b)=>a.nome.localeCompare(b.nome));
 
   const ating=lista.filter(d=>d.logadoDia>=JORNADA_MIN).length;
   const nat=lista.length-ating;
@@ -752,7 +911,7 @@ function renderDiario(){
   const tb=document.querySelector('#tabelaDia tbody');
   tb.innerHTML=lista.slice(0,800).map(d=>{
     const ok=d.logadoDia>=JORNADA_MIN;
-    return `<tr class="${ok?'':'bad'}">
+    retornar `<tr class="${ok?'':'ruim'}">
       <td><b>${d.login}</b></td><td>${d.nome}</td>
       <td style="color:var(--vivo);font-weight:700">${d.supervisor}</td>
       <td class="num" style="font-size:13px">${fmtHMS(d.logadoDia)}</td>
@@ -760,10 +919,10 @@ function renderDiario(){
       <td style="color:#6B7280;font-family:Consolas,monospace;font-size:11px">${fmtHMS(d.logadoAcum)}</td>
       <td style="color:#9CA3AF;font-family:Consolas,monospace;font-size:11px">−${fmtHMS(d.logadoAnt)}</td>
     </tr>`;
-  }).join('');
+  }).juntar('');
   document.getElementById('dCount').textContent=`${lista.length} operador(es)${lista.length>800?' — exibindo 800':''} · ${snapB?'Delta entre '+formatarData(dB)+' → '+formatarData(dA):'Acumulado em '+formatarData(dA)}`;
 
-  // GRÁFICO TOP: respeita filtro (se status = bad mostra TOP OFENSORES)
+  // GRÁFICO TOP: respeito filtro (se status = ruim mostra TOP OFENSORES)
   const filtroTopMode=document.getElementById('dStatus').value;
   let topTitle='🏆 TOP 10 — Melhores Logue no Dia';
   if(filtroTopMode==='bad')topTitle='🔥 TOP 10 — OFENSORES (não atingiram 6:20)';
@@ -775,7 +934,7 @@ function renderDiario(){
     labels:top.map(d=>d.nome.split(' ').slice(0,2).join(' ')),
     datasets:[{label:'Logue no dia',data:top.map(d=>+(d.logadoDia/3600).toFixed(2)),
       backgroundColor:filtroTopMode==='bad'?'rgba(239,68,68,.85)':'rgba(16,185,129,.85)',borderColor:filtroTopMode==='bad'?'#B91C1C':'#059669',borderWidth:1,borderRadius:6}]},
-    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmtHMS(c.parsed.x*3600)}}},scales:{x:{ticks:{color:filtroTopMode==='bad'?'#EF4444':'#10B981',font:{weight:600}}},y:{ticks:{color:'#1E1B4B',font:{size:11,weight:600}}}}}});
+    opções:{eixoÍndice:'y',responsivo:true,manterProporção:false,plugins:{legenda:{exibir:false},dica:{callbacks:{rótulo:c=>fmtHMS(c.parsed.x*3600)}}},escalas:{x:{marcadores:{cor:filtroTopMode==='bad'?'#EF4444':'#10B981',fonte:{peso:600}}},y:{marcadores:{cor:'#1E1B4B',fonte:{tamanho:11,peso:600}}}}}});
 
   // GRÁFICO BOT: sempre OFENSORES (piores absolutos do dia, < 6:20)
   const bot=[...snapA.dados].map(o=>{
@@ -788,22 +947,457 @@ function renderDiario(){
     labels:bot.map(d=>d.nome.split(' ').slice(0,2).join(' ')),
     datasets:[{label:'Logue no dia',data:bot.map(d=>+(d.logadoDia/3600).toFixed(2)),
       backgroundColor:'rgba(239,68,68,.85)',borderColor:'#B91C1C',borderWidth:1,borderRadius:6}]},
-    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmtHMS(c.parsed.x*3600)}}},scales:{x:{ticks:{color:'#EF4444',font:{weight:600}}},y:{ticks:{color:'#1E1B4B',font:{size:11,weight:600}}}}}});
+    opções:{eixoÍndice:'y',responsivo:true,manterProporção:false,plugins:{legenda:{exibir:false},dica:{callbacks:{rótulo:c=>fmtHMS(c.parsed.x*3600)}}},escalas:{x:{marcadores:{cor:'#EF4444',fonte:{peso:600}}},y:{marcadores:{cor:'#1E1B4B',fonte:{tamanho:11,peso:600}}}}}});
 }
 
-function modoApresentacao(){if(document.fullscreenElement){document.exitFullscreen()}else{document.documentElement.requestFullscreen()}toast('🎬 Modo apresentação ativado!')}
+function modoApresentacao(){if(document.fullscreenElement){document.exitFullscreen()}else{document.documentElement.requestFullscreen()}toast('🎬 Modo apresentação ativada!')}
+
+// ============================================================
+// ============ NOVAS VISÕES (PRODUTO / EXCEDENTES / ADERÊNCIA / LOGUE) ============
+// ============================================================
+
+// Calcula acumulados percorrendo TODOS os snapshots
+função obterSnapAnterior(dadosAtual){
+  const datas=Object.keys(DB.snaps).sort();
+  const i=datas.indexOf(dataAtual);
+  se(i<=0)retorne nulo;
+  retornar DB.snaps[datas[i-1]];
+}
+função calcularAcumulados(){
+  const exc={}; // por login: {nome, supervisor, produto, totalExcedido, dias, detalhes:[{dados,excedido,pausa}]}
+  const ader={}; // por login: {nome, supervisor, produto, dias, totalLogado, totalDias}
+  const semLog={}; // por login: {nome, supervisor, produto, dias, déficit, totalDias}
+  const datasOrd=Object.keys(DB.snaps).sort();
+  datasOrd.forEach(dt=>{
+    const snap=DB.snaps[dt];
+    snap.dados.forEach(o=>{
+      const k=(o.login||o.nome).toLowerCase();
+      const pausaTotal=(o.descanso||0)+(o.lanche||0);
+      const cumpreLog=(o.logado||0)>=JORNADA_MIN;
+      const dentroPausa=pausaTotal<=LIMITE_PAUSA;
+      // Excedente de pausa (SÓ se passou de 40 min de fato — exclui quem usou menos)
+      se (pausaTotal>LIMITE_PAUSA){
+        const excedido=pausaTotal-LIMITE_PAUSA;
+        if(!exc[k])exc[k]={login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,totalExcedido:0,dias:0,detalhes:[]};
+        exc[k].totalExcedido+=excedido;
+        exc[k].dias++;
+        exc[k].detalhes.push({dados:dt,excedido,pausa:pausaTotal,descanso:o.descanso,lanche:o.lanche});
+      }
+      // Aderência (logue OK + pausa dentro do limite)
+      se(cumpreLog && dentroPausa){
+        if(!ader[k])ader[k]={login:o.login,nome:o.nome,supervis ou:o.supervisor,produto:o.produto,dias:0,totalLogado:0,totalDias:0};
+        ader[k].dias++;
+        ader[k].totalLogado+=(o.logado||0);
+      }
+      // Contagem global por operadora (pra calcular % e dias sem log)
+      if(ader[k])ader[k].totalDias=(ader[k].totalDias||0)+0; // será recalculado abaixo
+      // Não cumpriu logue
+      se(!cumpreLog){
+        if(!semLog[k])semLog[k]={login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,dias:0,déficit:0,totalDias:0};
+        semLog[k].dias++;
+        semLog[k].déficit+=(JORNADA_MIN-(o.logado||0));
+      }
+    });
+  });
+  //Recalcula totalDias por operador
+  const totalSnaps=datasOrd.length;
+  Object.values(ader).forEach(a=>a.totalDias=totalSnaps);
+  Object.values(semLog).forEach(s=>s.totalDias=totalSnaps);
+  Object.values(exc).forEach(e=>e.totalDias=totalSnaps);
+  retornar {exc,ader,semLog,totalSnaps};
+}
+
+// -------- VISÃO POR PRODUTO --------
+função renderProduto(){
+  const snap=DB.snaps[DB.atual];if(!snap)return;
+  // grupos de produtos por produto (excluindo NR17 - se houver registro chamado "NR17" no produto, pula)
+  const grupos={};
+  snap.dados.forEach(d=>{
+    if(!d.produto||d.produto==='—')return;
+    const prodUp=d.produto.toUpperCase();
+    if(prodUp.includes('NR17')||prodUp.includes('NR 17'))return;
+    if(!grupos[d.produto])grupos[d.produto]={nome:d.produto,ops:[],supervisores:new Set()};
+    grupos[d.produto].ops.push(d);
+    if(d.supervisor&&d.supervisor!=='—')grupos[d.produto].supervisores.add(d.supervisor);
+  });
+  deixe lista=Object.values(grupos).map(g=>{
+    const total=g.ops.length;
+    const ating=g.ops.filter(o=>o.logado>=JORNADA_MIN).length;
+    const exc=g.ops.filter(o=>(o.descanso+o.lanche)>LIMITE_PAUSA).length;
+    const totLog=g.ops.reduce((s,o)=>s+o.logado,0);
+    const totPausa=g.ops.reduce((s,o)=>s+o.pausa,0);
+    const totBreak=g.ops.reduce((s,o)=>s+o.descanso+o.lanche,0);
+    const pct=total?(ating/total)*100:0;
+    return {...g,total,ating,nating:total-ating,exc,totLog,totPausa,totBreak,pct,avgLog:total?totLog/total:0};
+  });
+  const q=(document.getElementById('fProdBusca').value||'').toLowerCase().trim();
+  if(q)lista=lista.filter(g=>g.nome.toLowerCase().includes(q));
+  const ord=document.getElementById('fProdSort').value;
+  if(ord==='pct')lista.sort((a,b)=>a.pct-b.pct);
+  senão se(ord==='pctd')lista.sort((a,b)=>b.pct-a.pct);
+  senão se(ord==='ops')lista.sort((a,b)=>b.total-a.total);
+  senão se(ord==='exc')lista.sort((a,b)=>b.exc-a.exc);
+  senão if(ord==='nome')lista.sort((a,b)=>a.nome.localeCompare(b.nome));
+
+  document.getElementById('pK1').textContent=lista.length;
+  document.getElementById('pK2').textContent=lista.reduce((s,g)=>s+g.total,0);
+  document.getElementById('pK3').textContent=lista.reduce((s,g)=>s+g.ating,0);
+  document.getElementById('pK4').textContent=lista.reduce((s,g)=>s+g.exc,0);
+
+  const grid=document.getElementById('prodGrid');
+  if(!lista.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:#9CA3AF;">Nenhum produto encontrado (NR17 é filtrado automaticamente)</div>';return}
+  grid.innerHTML=lista.map(g=>{
+    let cls='ok',fcls='';
+    if(g.pct<50){cls='ruim';fcls='ruim'}
+    senão se(g.pct<80){cls='';fcls='aviso'}
+    retornar `<div class="sup-card ${cls}">
+      <div class="sup-name">🎁 ${g.nome}<div style="font-size:10px;color:#6B7280;font-weight:600;margin-top:2px;text-transform:uppercase;letter-spacing:.5px">${g.supervisores.size} supervisor(es)</div></div>
+      <div class="sup-stats">
+        <div class="sup-stat"><div class="l">Operadores</div><div class="v">${g.total}</div></div>
+        <div class="sup-stat ok"><div class="l">✅ Atingiram 6:20</div><div class="v">${g.ating}</div></div>
+        <div class="sup-stat bad"><div class="l">❌ Não Atingiram</div><div class="v">${g.nating}</div></div>
+        <div class="sup-stat bad"><div class="l">🚨 Excedentes 40min</div><div class="v">${g.exc}</div></div>
+        <div class="sup-stat"><div class="l">⏱️ Média Logado</div><div class="v">${fmtHMS(g.avgLog)}</div></div>
+        <div class="sup-stat"><div class="l">☕ Pausa Total (eq.)</div><div class="v">${fmtHMS(g.totBreak)}</div></div>
+      </div>
+      <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#6B7280;font-weight:700;text-transform:uppercase">% Aderência Logue</span><span style="font-size:18px;font-weight:900;color:${g.pct>=80?'#10B981':g.pct>=50?'#F59E0B':'#EF4444'}">${g.pct.toFixed(1)}%</span></div>
+      <div class="sup-pct"><div class="sup-pct-fill ${fcls}" style="width:${g.pct.toFixed(1)}%"></div></div>
+    </div>`;
+  }).juntar('');
+}
+
+// -------- EXCEDENTES DE PAUSA --------
+função initExcedentes(){
+  const snap=DB.snaps[DB.atual];if(!snap)return;
+  const prods=[...new Set(snap.dados.map(d=>d.produto).filter(p=>p&&p!=='—'&&!p.toUpperCase().includes('NR17')))].sort();
+  const sups=[...new Set(snap.dados.map(d=>d.supervisor).filter(s=>s&&s!=='—'))].sort();
+  document.getElementById('eProd').innerHTML='<option value="">Todos ('+prods.length+')</option>'+prods.map(p=>`<option value="${p}">${p}</option>`).join('');
+  document.getElementById('eSup').innerHTML='<option value="">Todos ('+sups.length+')</option>'+sups.map(s=>`<option value="${s}">${s}</option>`).join('');
+  renderExcedentes();
+}
+função renderExcedentes(){
+  const snap=DB.snaps[DB.atual];if(!snap)return;
+  const modo=document.getElementById('eModo').value;
+  const acumulados=calcAcumulados();
+  const q=(document.getElementById('eBusca').value||'').toLowerCase().trim();
+  const fProd=document.getElementById('eProd').value;
+  const fSup=document.getElementById('eSup').value;
+  const ord=document.getElementById('eSort').value;
+  const isAcum=modo==='acum';
+  const isDia=modo==='dia';
+  document.getElementById('eColAcum').style.display=isAcum?'':'none';
+  document.getElementById('eColTotalAcum').style.display=isAcum?'':'none';
+  const badge=document.getElementById('eD1Badge');
+
+  deixe lista;
+  se(éAcum){
+    badge.style.display='nenhum';
+    document.getElementById('eTitulo').textContent='Ranking ACUMULADO de Excedentes (todos os snapshots importados)';
+    lista=Object.values(acumulados.exc).map(e=>({...e,
+      excHoje:e.detalhes[e.detalhes.length-1]?.excedido||0,
+      pausaHoje:e.detalhes[e.detalhes.length-1]?.pausa||0,
+      descansoHoje:e.detalhes[e.detalhes.length-1]?.descanso||0,
+      lancheHoje:e.detalhes[e.detalhes.length-1]?.lanche||0
+    }));
+  } senão se(éDia){
+    // MODO DIA (D-1): só o que aconteceu NAQUELE DIA específico (subtraindo do dia anterior)
+    const snapAnt=getSnapAnterior(DB.atual);
+    se(!snapAnt){
+      badge.style.display='block';
+      badge.innerHTML=`⚠️ <b>Não existe snapshot anterior a ${formatarData(DB.atual)}.</b> Importe a planilha do dia anterior para poder calcular o D-1. Mostrando dados acumulados como fallback.`;
+      lista=snap.dados.filter(o=>(o.descanso+o.lanche)>LIMITE_PAUSA).map(o=>({
+        login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,
+        descansoHoje:o.descanso,lancheHoje:o.lanche,pausaHoje:o.descanso+o.lanche,
+        excHoje:(o.descanso+o.lanche)-LIMITE_PAUSA,totalExcedido:0,dias:0
+      }));
+    } outro {
+      badge.style.display='block';
+      badge.innerHTML=`📊 <b>MODO DIA (D-1):</b> mostrando SÓ o que aconteceu em ${formatarData(DB.atual)} (subtraindo do snapshot anterior ${formatarData(snapAnt.data)}). Limite por dia: <b>40 min em (Descanso + Lanche)</b>.`;
+      const mapAnt={};snapAnt.dados.forEach(o=>{const k=(o.login||o.nome).toLowerCase();mapAnt[k]=o});
+      const detalhesPorOp=acumulados.exc;
+      lista=[];
+      snap.dados.forEach(o=>{
+        const k=(o.login||o.nome).toLowerCase();
+        const ant=mapAnt[k];
+        // Calcula descanso/lanche SÓ do dia
+        const descansoDia=ant?Math.max(0,o.descanso-ant.descanso):o.descanso;
+        const lancheDia=ant?Math.max(0,o.lanche-ant.lanche):o.lanche;
+        const pausaDia=descansoDia+lancheDia;
+        se(pausaDia>LIMITE_PAUSA){
+          lista.push({
+            login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,
+            descansoHoje:descansoDia,lancheHoje:lancheDia,pausaHoje:pausaDia,
+            excHoje:pausaDia-LIMITE_PAUSA,
+            totalExcedido:detalhesPorOp[k]?detalhesPorOp[k].totalExcedido:0,
+            dias:detalhesPorOp[k]?detalhesPorOp[k].dias:1
+          });
+        }
+      });
+      document.getElementById('eTitulo').textContent=`Excedentes APENAS no dia ${formatarData(DB.atual)} (D-1 vs ${formatarData(snapAnt.data)})`;
+    }
+  } outro {
+    badge.style.display='nenhum';
+    document.getElementById('eTitulo').textContent=`Excedentes (acumulados da planilha) em ${formatarData(DB.atual)}`;
+    lista=snap.dados.filter(o=>(o.descanso+o.lanche)>LIMITE_PAUSA).map(o=>{
+      const k=(o.login||o.nome).toLowerCase();
+      const acum=acumulados.exc[k];
+      retornar {
+        login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,
+        descansoHoje:o.descanso,lancheHoje:o.lanche,pausaHoje:o.descanso+o.lanche,
+        excHoje:(o.descanso+o.lanche)-LIMITE_PAUSA,
+        totalExcedido:acum?acum.totalExcedido:0,
+        dias:acum?acum.dias:0
+      };
+    });
+  }
+  if(q)lista=lista.filter(d=>(d.nome+' '+d.login+' '+d.supervisor).toLowerCase().includes(q));
+  if(fProd)lista=lista.filter(d=>d.produto===fProd);
+  if(fSup)lista=lista.filter(d=>d.supervisor===fSup);
+  if(ord==='exc')lista.sort((a,b)=>(isAcum?b.totalExcedido-a.totalExcedido:b.excHoje-a.excHoje));
+  senão if(ord==='dias')lista.sort((a,b)=>b.dias-a.dias);
+  senão if(ord==='nome')lista.sort((a,b)=>a.nome.localeCompare(b.nome));
+
+  document.getElementById('eK1').textContent=lista.length;
+  const totExc=lista.reduce((s,d)=>s+(isAcum?d.totalExcedido:d.excHoje),0);
+  document.getElementById('eK2').textContent=fmtHMS(totExc);
+  document.getElementById('eK3').textContent=fmtHMS(lista.length?totExc/lista.length:0);
+  const top=[...lista].sort((a,b)=>b.dias-a.dias)[0];
+  document.getElementById('eK4').textContent=top?`${top.nome.split(' ').slice(0,2).join(' ')} (${top.dias}d)`:'—';
+
+  const tb=document.querySelector('#tabelaExc tbody');
+  if(!lista.length){tb.innerHTML=`<tr><td colspan="11" style="text-align:center;padding:30px;color:#10B981;font-weight:700">✨ Nenhum operador excedeu 40 min ${isAcum?'no acumulado':isDia?'NESSE DIA':'hoje'}!</td></tr>`;}
+  senão tb.innerHTML=lista.slice(0,800).map((d,i)=>{
+    const qualPausa=d.descansoHoje>d.lancheHoje?'Descanso':'Lanche';
+    retornar `<tr class="bad">
+      <td style="font-weight:900;color:var(--vivo)">${i+1}º</td>
+      <td><b>${d.nome}</b><div style="font-size:10px;color:#9CA3AF">${d.login||''}</div></td>
+      <td style="font-weight:700;color:var(--vivo)">${d.supervisor}</td>
+      <td style="font-size:11px;color:#6B7280">${d.produto}</td>
+      <td class="num">${fmtHMS(d.descansoHoje)}</td>
+      <td class="num">${fmtHMS(d.lancheHoje)}</td>
+      <td class="num" style="color:#F59E0B;font-weight:700">${fmtHMS(d.pausaHoje)}</td>
+      <td class="num" style="color:#6B7280">${fmtHMS(LIMITE_PAUSA)}</td>
+      <td class="num" style="color:#EF4444;font-weight:800">+${fmtHMS(d.excHoje)} <span style="font-size:9px;color:#9CA3AF;font-weight:600;display:block">(${qualPausa})</span></td>
+      ${isAcum?`<td style="text-align:center;font-weight:800;color:var(--vivo)">${d.dias}d</td><td class="num" style="color:#EF4444;font-weight:800">${fmtHMS(d.totalExcedido)}</td>`:''}
+    </tr>`;
+  }).juntar('');
+  document.getElementById('eCount').textContent=`${lista.length} operador(es) ${isAcum?'no ranking acumulado':isDia?'SÓ no dia '+formatarData(DB.atual):'no snapshot atual (acumulado)'}`;
+}
+
+// -------- ADERÊNCIA GERAL --------
+função initAderencia(){
+  const snap=DB.snaps[DB.atual];if(!snap)return;
+  const prods=[...new Set(snap.dados.map(d=>d.produto).filter(p=>p&&p!=='—'))].sort();
+  const sups=[...new Set(snap.dados.map(d=>d.supervisor).filter(s=>s&&s!=='—'))].sort();
+  document.getElementById('aProd').innerHTML='<option value="">Todos</option>'+prods.map(p=>`<option value="${p}">${p}</option>`).join('');
+  document.getElementById('aSup').innerHTML='<option value="">Todos</option>'+sups.map(s=>`<option value="${s}">${s}</option>`).join('');
+  renderAderencia();
+}
+função renderizarAderencia(){
+  const snap=DB.snaps[DB.atual];if(!snap)return;
+  const modo=document.getElementById('aModo').value;
+  const acumulados=calcAcumulados();
+  const q=(document.getElementById('aBusca').value||'').toLowerCase().trim();
+  const fProd=document.getElementById('aProd').value;
+  const fSup=document.getElementById('aSup').value;
+  const ord=document.getElementById('aSort').value;
+  const isAcum=modo==='acum';
+  const isDia=modo==='dia';
+  document.getElementById('aColDias').style.display=isAcum?'':'none';
+  const badge=document.getElementById('aD1Badge');
+
+  deixe lista;
+  se(éAcum){
+    badge.style.display='nenhum';
+    lista=Object.values(acumulados.ader).map(a=>({...a,
+      pausaHoje:0,logadoHoje:Math.round(a.totalLogado/Math.max(a.dias,1))
+    }));
+  } senão se(éDia){
+    const snapAnt=getSnapAnterior(DB.atual);
+    se(!snapAnt){
+      badge.style.display='block';
+      badge.innerHTML=`⚠️ <b>Não existe snapshot anterior a ${formatarData(DB.atual)}.</b> Importe a planilha do dia anterior. Mostrando acumulado como fallback.`;
+      lista=snap.dados.filter(o=>o.logado>=JORNADA_MIN && (o.descanso+o.lanche)<=LIMITE_PAUSA).map(o=>({
+        login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,
+        logadoHoje:o.logado,pausaHoje:o.descanso+o.lanche,dias:1
+      }));
+    } outro {
+      badge.style.display='block';
+      badge.innerHTML=`📊 <b>MODO DIA (D-1):</b> mostrando aderência SÓ no dia ${formatarData(DB.atual)} (vs ${formatarData(snapAnt.data)}). Critério: <b>Logado no dia ≥ 6h20</b> E <b>Pausa no dia ≤ 40 min</b>.`;
+      const mapAnt={};snapAnt.dados.forEach(o=>{const k=(o.login||o.nome).toLowerCase();mapAnt[k]=o});
+      lista=[];
+      snap.dados.forEach(o=>{
+        const k=(o.login||o.nome).toLowerCase();
+        const ant=mapAnt[k];
+        const logadoDia=ant?Math.max(0,o.logado-ant.logado):o.logado;
+        const descansoDia=ant?Math.max(0,o.descanso-ant.descanso):o.descanso;
+        const lancheDia=ant?Math.max(0,o.lanche-ant.lanche):o.lanche;
+        const pausaDia=descansoDia+lancheDia;
+        // Só conta se trabalhou no dia (>0) e bateu os 2 critérios
+        if(logadoDia>=JORNADA_MIN && pausaDia<=LIMITE_PAUSA){
+          lista.push({
+            login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,
+            logadoHoje:logadoDia,pausaHoje:pausaDia,
+            dias:acumulados.ader[k]?acumulados.ader[k].dias:1
+          });
+        }
+      });
+    }
+  } outro {
+    badge.style.display='nenhum';
+    lista=snap.dados.filter(o=>{
+      const pausaTotal=o.descanso+o.lanche;
+      return o.logado>=JORNADA_MIN && pausaTotal<=LIMITE_PAUSA;
+    }).map(o=>{
+      const k=(o.login||o.nome).toLowerCase();
+      const acum=acumulados.ader[k];
+      retornar {
+        login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,
+        logadoHoje:o.logado,pausaHoje:o.descanso+o.lanche,
+        dias:acum?acum.dias:1
+      };
+    });
+  }
+  if(q)lista=lista.filter(d=>(d.nome+' '+d.login+' '+d.supervisor).toLowerCase().includes(q));
+  if(fProd)lista=lista.filter(d=>d.produto===fProd);
+  if(fSup)lista=lista.filter(d=>d.supervisor===fSup);
+  if(ord==='dias')lista.sort((a,b)=>b.dias-a.dias);
+  senão if(ord==='logado')lista.sort((a,b)=>b.logadoHoje-a.logadoHoje);
+  senão if(ord==='nome')lista.sort((a,b)=>a.nome.localeCompare(b.nome));
+
+  document.getElementById('aK1').textContent=lista.length;
+  const totalOps=snap.dados.length;
+  document.getElementById('aK2').textContent=totalOps?((lista.length/totalOps)*100).toFixed(1)+'%':'—';
+  const avgLog=lista.length?lista.reduce((s,d)=>s+d.logadoHoje,0)/lista.length:0;
+  document.getElementById('aK3').textContent=fmtHMS(avgLog);
+  const top=[...lista].sort((a,b)=>b.dias-a.dias)[0];
+  document.getElementById('aK4').textContent=top?`${top.nome.split(' ').slice(0,2).join(' ')} (${top.dias}d)`:'—';
+
+  const tb=document.querySelector('#tabelaAder tbody');
+  if(!lista.length){tb.innerHTML=`<tr><td colspan="8" style="text-align:center;padding:30px;color:#6B7280;font-weight:700">Nenhum operador aderente ${isAcum?'no acumulado':isDia?'NESSE DIA':'no snapshot atual'}.</td></tr>`;}
+  senão tb.innerHTML=lista.slice(0,800).map((d,i)=>`<tr>
+    <td style="font-weight:900;color:#10B981">${i+1}º</td>
+    <td><b>${d.nome}</b><div style="font-size:10px;color:#9CA3AF">${d.login||''}</div></td>
+    <td style="font-weight:700;color:var(--vivo)">${d.supervisor}</td>
+    <td style="font-size:11px;color:#6B7280">${d.produto}</td>
+    <td class="num" style="color:#10B981;font-weight:700">${fmtHMS(d.logadoHoje)}</td>
+    <td class="num" style="color:${isAcum?'#9CA3AF':(d.pausaHoje<=LIMITE_PAUSA?'#10B981':'#EF4444')}">${isAcum?'—':fmtHMS(d.pausaHoje)}</td>
+    <td><span class="chip ok">⭐ TOP</span></td>
+    ${isAcum?`<td style="text-align:center;font-weight:800;color:#10B981">${d.dias}d</td>`:''}
+  </tr>`).join('');
+  document.getElementById('aCount').textContent=`${lista.length} melhor desempenho(s) ${isAcum?'(acumulado)':isDia?'(SÓ no dia '+formatarData(DB.atual)+')':'(snapshot atual)'}`;
+}
+
+// -------- SEM LOGUE 6:20 --------
+função initLogue(){
+  const snap=DB.snaps[DB.atual];if(!snap)return;
+  const prods=[...new Set(snap.dados.map(d=>d.produto).filter(p=>p&&p!=='—'))].sort();
+  const sups=[...new Set(snap.dados.map(d=>d.supervisor).filter(s=>s&&s!=='—'))].sort();
+  document.getElementById('lProd').innerHTML='<option value="">Todos</option>'+prods.map(p=>`<option value="${p}">${p}</option>`).join('');
+  document.getElementById('lSup').innerHTML='<option value="">Todos</option>'+sups.map(s=>`<option value="${s}">${s}</option>`).join('');
+  renderLogue();
+}
+função renderizarLoga(){
+  const snap=DB.snaps[DB.atual];if(!snap)return;
+  const modo=document.getElementById('lModo').value;
+  const acumulados=calcAcumulados();
+  const q=(document.getElementById('lBusca').value||'').toLowerCase().trim();
+  const fProd=document.getElementById('lProd').value;
+  const fSup=document.getElementById('lSup').value;
+  const ord=document.getElementById('lSort').value;
+  const isAcum=modo==='acum';
+  const isDia=modo==='dia';
+  document.getElementById('lColDias').style.display=isAcum?'':'none';
+  const badge=document.getElementById('lD1Badge');
+
+  deixe lista;
+  se(éAcum){
+    badge.style.display='nenhum';
+    lista=Object.values(acumulados.semLog).map(s=>({...s,logadoHoje:0,faltaHoje:Math.round(s.deficit/Math.max(s.dias,1))}));
+  } senão se(éDia){
+    const snapAnt=getSnapAnterior(DB.atual);
+    se(!snapAnt){
+      badge.style.display='block';
+      badge.innerHTML=`⚠️ <b>Não existe snapshot anterior a ${formatarData(DB.atual)}.</b> Importe a planilha do dia anterior. Mostrando acumulado como fallback.`;
+      lista=snap.dados.filter(o=>o.logado<JORNADA_MIN).map(o=>({
+        login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,
+        logadoHoje:o.logado,faltaHoje:JORNADA_MIN-o.logado,
+        dias:1,déficit:JORNADA_MIN-o.logado
+      }));
+    } outro {
+      badge.style.display='block';
+      badge.innerHTML=`📊 <b>MODO DIA (D-1):</b> mostrando quem NÃO bateu 6h20 SÓ no dia ${formatarData(DB.atual)} (vs ${formatarData(snapAnt.data)}). Critério: <b>Logado no dia < 6h20</b>.`;
+      const mapAnt={};snapAnt.dados.forEach(o=>{const k=(o.login||o.nome).toLowerCase();mapAnt[k]=o});
+      lista=[];
+      snap.dados.forEach(o=>{
+        const k=(o.login||o.nome).toLowerCase();
+        const ant=mapAnt[k];
+        const logadoDia=ant?Math.max(0,o.logado-ant.logado):o.logado;
+        // Só inclui quem trabalhou no dia (logadoDia > 0) e não bateu 6:20
+        // Se logadoDia==0, é dia de folga/afastamento — NÃO conta como ofensor
+        if(logadoDia>0 && logadoDia<JORNADA_MIN){
+          lista.push({
+            login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,
+            logadoHoje:logadoDia,faltaHoje:JORNADA_MIN-logadoDia,
+            dias:acumulados.semLog[k]?acumulados.semLog[k].dias:1,
+            déficit:JORNADA_MIN-logadoDia
+          });
+        }
+      });
+    }
+  } outro {
+    badge.style.display='nenhum';
+    lista=snap.dados.filter(o=>o.logado<JORNADA_MIN).map(o=>{
+      const k=(o.login||o.nome).toLowerCase();
+      const acum=acumulados.semLog[k];
+      retornar {
+        login:o.login,nome:o.nome,supervisor:o.supervisor,produto:o.produto,
+        logadoHoje:o.logado,faltaHoje:JORNADA_MIN-o.logado,
+        dias:acum?acum.dias:1,
+        déficit:acum?acum.déficit:JORNADA_MIN-o.logado
+      };
+    });
+  }
+  if(q)lista=lista.filter(d=>(d.nome+' '+d.login+' '+d.supervisor).toLowerCase().includes(q));
+  if(fProd)lista=lista.filter(d=>d.produto===fProd);
+  if(fSup)lista=lista.filter(d=>d.supervisor===fSup);
+  if(ord==='falta')lista.sort((a,b)=>(isAcum?b.deficit-a.deficit:b.faltaHoje-a.faltaHoje));
+  senão if(ord==='dias')lista.sort((a,b)=>b.dias-a.dias);
+  senão if(ord==='nome')lista.sort((a,b)=>a.nome.localeCompare(b.nome));
+
+  document.getElementById('lK1').textContent=lista.length;
+  const totDef=lista.reduce((s,d)=>s+(isAcum?d.deficit:d.faltaHoje),0);
+  document.getElementById('lK2').textContent=fmtHMS(totDef);
+  document.getElementById('lK3').textContent=fmtHMS(lista.length?totDef/lista.length:0);
+  const top=[...lista].sort((a,b)=>b.dias-a.dias)[0];
+  document.getElementById('lK4').textContent=top?`${top.nome.split(' ').slice(0,2).join(' ')} (${top.dias}d)`:'—';
+
+  const tb=document.querySelector('#tabelaLog tbody');
+  if(!lista.length){tb.innerHTML=`<tr><td colspan="8" style="text-align:center;padding:30px;color:#10B981;font-weight:700">✨ Todos cumprem a jornada ${isDia?'NESSE DIA':'de 6h20'}!</td></tr>`;}
+  senão tb.innerHTML=lista.slice(0,800).map((d,i)=>`<tr class="bad">
+    <td style="font-weight:900;color:#EF4444">${i+1}º</td>
+    <td><b>${d.nome}</b><div style="font-size:10px;color:#9CA3AF">${d.login||''}</div></td>
+    <td style="font-weight:700;color:var(--vivo)">${d.supervisor}</td>
+    <td style="font-size:11px;color:#6B7280">${d.produto}</td>
+    <td class="num" style="color:#EF4444;font-weight:700">${fmtHMS(d.logadoHoje)}</td>
+    <td class="num" style="color:#6B7280">${fmtHMS(JORNADA_MIN)}</td>
+    <td class="num" style="color:#EF4444;font-weight:800">-${fmtHMS(d.faltaHoje)}</td>
+    ${isAcum?`<td style="text-align:center;font-weight:800;color:#EF4444">${d.dias}d</td>`:''}
+  </tr>`).join('');
+  document.getElementById('lCount').textContent=`${lista.length} operador(es) ${isAcum?'no ranking acumulado':isDia?'SÓ no dia '+formatarData(DB.atual):'no snapshot atual'}`;
+}
 function limparTudo(){if(!confirm('Apagar TODOS os snapshots? Irreversível.'))return;DB={snaps:{},atual:null};save();location.reload()}
-function exportarCSV(){
+função CSV(){
   const arr=aplicarFiltros();if(!arr.length){toast('Nada para exportar');return}
   const cab=['Login','Login Cliente','Nome','Equipe','Supervisor','Tempo Logado','Atingiu 6:20','Pausa','Descanso','Lanche','NR17','Improdutiva','Produtiva','Retorno'];
-  const linhas=arr.map(d=>[d.login,d.loginCli,d.nome,d.equipe,d.supervisor,fmtHMS(d.logado),(d.logado>=JORNADA_MIN?'SIM':'NAO'),fmtHMS(d.pausa),fmtHMS(d.descanso),fmtHMS(d.lanche),fmtHMS(d.nr17),fmtHMS(d.improd),fmtHMS(d.produt),fmtHMS(d.retorno)]);
+  const linhas=arr.map(d=>[d.login,d.loginCli,d.nome,d.equipe,d.supervisor,fmtHMS(d.logado),(d.logado>=JORNADA_MIN?'SIM':'NAO'), fmtHMS(d.pausa),fmtHMS(d.descanso),fmtHMS(d.lanche),fmtHMS(d.nr17),fmtHMS(d.improd),fmtHMS(d.produt),fmtHMS(d.retorno)]);
   const csv=[cab,...linhas].map(l=>l.map(c=>`"${String(c||'').replace(/"/g,'""')}"`).join(';')).join('\n');
   const blob=new Blob(['\ufeff'+csv],{type:'text/csv'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='konecta-wde-'+DB.atual+'.csv';a.click();
   toast('📥 CSV exportado!');
 }
 
-load();
+carregar();
 if(Object.keys(DB.snaps).length>0){setTimeout(()=>entrar(),800);}
 </script>
 </body></html>
